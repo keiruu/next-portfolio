@@ -25,22 +25,19 @@ const LoadingScreen = () => {
 
   const pageTransition = {
     hidden: {
-      
       scale: 0,
     },
     visible: {
-    
       scale: 1,
     },
     exit: {
-    
       scale: 0,
     }
   }
 
   const childVariants = {
     initial: { scale: 0, },
-    play: { scale: 1.2,},
+    play: { scale: 1,},
     exit: {
       opacity: 0,
       scale: 0,
@@ -54,42 +51,42 @@ const LoadingScreen = () => {
   return (
     <motion.div 
       key="box"
-      className='w-fit relative'
+      className='w-fit relative lg:pb-0 pb-10'
       initial="hidden"
       animate="visible"
       exit="exit"
       variants={popVariants}
-      transition={{delay: 0.6}}
+      transition={{delay: 0.8}}
     >
       <motion.div variants='pageTransition' transition={{duration:1}} initial='visible' animate='hidden' exit='exit' className="absolute scale-[5] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-accent-2"></motion.div>
 
-      <h1 className='text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
+      <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
       >aku</h1>
 
-      <motion.div className=' absolute -left-4 bottom-0'
+      <motion.div className=' absolute -left-4 bottom-11 lg:bottom-0'
         initial="initial"
         animate="play"
         variants={childVariants}
         exit="exit"
-        transition={{delay: 0.9}}
+        transition={{delay: 1.2}}
       >
         <Stars fill="#d88f61" />
       </motion.div>
-      <motion.div className='absolute right-4 top-0'
-        initial="initial"
-        animate="play"
-        variants={childVariants}
-        exit="exit"
-        transition={{delay: 0.8}}
-      >
-        <Stars fill="#FFC857" />
-      </motion.div>
-      <motion.div className='absolute -right-4 bottom-2'
+      <motion.div className='absolute right-2 lg:right-4 -top-1 lg:top-0'
         initial="initial"
         animate="play"
         variants={childVariants}
         exit="exit"
         transition={{delay: 1}}
+      >
+        <Stars fill="#FFC857" />
+      </motion.div>
+      <motion.div className='absolute -right-4 bottom-10 lg:bottom-2'
+        initial="initial"
+        animate="play"
+        variants={childVariants}
+        exit="exit"
+        transition={{delay: 1.4}}
       >
         <Stars fill="#EF6461" />
       </motion.div>

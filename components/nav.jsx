@@ -14,7 +14,6 @@ export default function Nav() {
 
   return (
     <div className='flex justify-between mx-auto my-8 w-[80%] items-center'>
-      
       <motion.div className='relative' initial='rest' whileHover='hover' animate='rest'>
         <Link href='/'>
           <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
@@ -47,13 +46,18 @@ export default function Nav() {
 
       </motion.div>
 
-      <div className='space-x-3 lg:space-x-11'>
+      <div className='hidden lg:block space-x-3 lg:space-x-11 text-font-color-2'>
         <MenuItem targetId="home" menuText="Home"/>
         <MenuItem targetId="projects" menuText="Projects"/>
         <MenuItem targetId="about" menuText="About"/>
         <MenuItem targetId="contact" menuText="Contact"/>
       </div>
 
+      <a href='/resume.pdf' target="_blank" rel="noreferrer">
+        <button className='text-sm lg:text-base rounded-full px-8 py-4 bg-accent-4 font-bowlby tracking-wider'>
+          Hire Me
+        </button>
+      </a>
     </div>
   )
 }

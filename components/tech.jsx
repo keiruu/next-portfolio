@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Tech() {
   return (
-    <div className='grid grid-cols-5 gap-8 mt-8 place-items-center'>
+    <div className='grid grid-cols-3 lg:grid-cols-5 gap-8 mt-8 place-items-center'>
       <img src='/tech/html.svg' className='w-14' alt='html'/>
       <img src='/tech/css.svg' className='w-14' alt='css'/>
       <img src='/tech/js.svg' className='w-14' alt='javascript'/>
