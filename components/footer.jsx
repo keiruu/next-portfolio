@@ -64,27 +64,10 @@ export default function Footer() {
               <BsGithub className='w-6 lg:w-full'/>
             </a>
           </div>
-          <button className='text-base flex flex-col items-center group'
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }}
-          ><FiArrowUp className='group-hover:-translate-y-1 transition-all transform'/> back to top</button>
         </div>
       </div>
 
       <div className='flex flex-col lg:hidden items-center justify-center py-8'>
-        <button className='text-base flex flex-col items-center group'
-            onClick={() => {
-              window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-              });
-            }}
-          ><FiArrowUp className='group-hover:-translate-y-1 transition-all transform'/> back to top
-        </button>
         <div className='flex flex-col justify-center items-center text-center py-4'>
           <motion.div className='relative w-fit' initial='rest' whileHover='hover' animate='rest'>
             <Link href='/'>

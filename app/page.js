@@ -110,16 +110,19 @@ export default function Home() {
   return (
     <div className={`font-inter bg-background text-font-color ${!showContent && 'overflow-hidden'}`}>
       <AnimatePresence mode='wait'>
-        {isLoading && (
+        {/* {isLoading && (
           <motion.div className='w-full h-screen flex justify-center items-center'>
             <LoadingScreen />
           </motion.div>
-        )}
+        )} 
         {showContent && (
           <motion.div>
             <Page/>
           </motion.div>
-        )}
+        )} */}
+        <motion.div>
+          <Page/>
+        </motion.div>
       </AnimatePresence>
     </div>
   )
