@@ -15,18 +15,20 @@ export default function Footer() {
   };
 
   return (
-    <div className='w-[80%]'>
+    <div className=''>
       <hr className='border-[#2c2c2c]'></hr>
       
       <div className='hidden lg:flex items-center justify-between py-8'>
         <div>
           <motion.div className='relative w-fit' initial='rest' whileHover='hover' animate='rest'>
-            <Link href='/'>
-              <h1 className='text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
+            <Link href='/' className=''>
+                <img src='/logo.svg' alt='aku logo' className='w-12 pb-2'/>
+              {/* <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-              >aku</h1>
+              >aku</h1> */}
             </Link>
+
 
             <motion.div className='absolute -left-4 bottom-0'
               initial="initial"
@@ -52,7 +54,7 @@ export default function Footer() {
 
           </motion.div>
           <p className='text-base text-font-color-2'>All rights reserved {currentYear}</p>
-          <p className='text-base text-font-color-2'>Made with ❤️</p>
+          <p className='text-base text-font-color-2'>Made with ❤️ by Abby</p>
         </div>
 
         <div className='flex gap-6 items-center'>
@@ -71,10 +73,11 @@ export default function Footer() {
         <div className='flex flex-col justify-center items-center text-center py-4'>
           <motion.div className='relative w-fit' initial='rest' whileHover='hover' animate='rest'>
             <Link href='/'>
-              <h1 className='text-3xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
+              <img src='/logo.svg' alt='aku logo' className='w-12 pb-2'/>
+              {/* <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
-              >aku</h1>
+              >aku</h1> */}
             </Link>
 
             <motion.div className='absolute -left-4 bottom-0'
@@ -101,7 +104,7 @@ export default function Footer() {
 
           </motion.div>
           <p className='text-base text-font-color-2'>All rights reserved {currentYear}</p>
-          <p className='text-base text-font-color-2'>Made with ❤️</p>
+          <p className='text-base text-font-color-2'>Made with ❤️ by Abby</p>
         </div>
 
         <div className='flex gap-6 items-center'>

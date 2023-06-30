@@ -42,7 +42,7 @@ export default function Nav() {
   };
 
   return (
-    <motion.div className='flex justify-between mx-auto my-8 lg:w-[80%] items-center px-8 md:px-20 lg:px-0'>
+    <motion.div className='flex justify-between mx-auto py-8 w-[85%] lg:w-[70%] items-center lg:px-0'>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -50,10 +50,11 @@ export default function Nav() {
       >
         <motion.div className='relative' initial='rest' whileHover='hover' animate='rest'>
           <Link href='/'>
-            <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
+            <img src='/logo.svg' alt='aku logo'/>
+            {/* <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-            >aku</h1>
+            >aku</h1> */}
           </Link>
 
           <motion.div className='absolute -left-4 bottom-0'
@@ -85,14 +86,14 @@ export default function Nav() {
         initial="hidden"
         animate="visible"
         variants={menuVariants}
-        className='hidden lg:block space-x-3 lg:space-x-11 text-font-color-2'
+        className=' space-x-3 lg:space-x-11 text-font-color-2'
       >
         <motion.span variants={menuChildVariants} className='inline-block'><MenuItem targetId="projects" menuText="Projects"/></motion.span>
         <motion.span variants={menuChildVariants} className='inline-block'><MenuItem targetId="about" menuText="About"/></motion.span>
         <motion.span variants={menuChildVariants} className='inline-block'><MenuItem targetId="contact" menuText="Contact"/></motion.span>
       </motion.div>
 
-      <motion.a 
+      {/* <motion.a 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.3 }}
@@ -102,7 +103,7 @@ export default function Nav() {
         <button className='text-sm lg:text-base rounded-full px-8 py-3 border border-accent-4 hover:border-white transition-all bg-accent-4 font-bowlby tracking-wider'>
           Hire Me
         </button>
-      </motion.a>
+      </motion.a> */}
     </motion.div>
   )
 }

@@ -58,11 +58,12 @@ const LoadingScreen = () => {
       variants={popVariants}
       transition={{delay: 0.8}}
     >
-      <motion.div variants='pageTransition' transition={{duration:1}} initial='visible' animate='hidden' exit='exit' className="absolute scale-[5] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-accent-2"></motion.div>
+      <motion.div variants='pageTransition' transition={{duration:1}} initial='visible' animate='hidden' exit='exit' className="absolute scale-[3] left-1/2 transform -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-accent-2"></motion.div>
 
-      <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
-      >aku</h1>
-
+        <img src='/logo.svg' alt='aku logo' className='transform transition-all'/>
+      {/* <h1 className='text-2xl lg:text-4xl font-bowlby cursor-pointer transform hover:rotate-3 transition-all' 
+      >aku</h1> */}
+{/* 
       <motion.div className=' absolute -left-4 bottom-11 lg:bottom-0'
         initial="initial"
         animate="play"
@@ -89,7 +90,7 @@ const LoadingScreen = () => {
         transition={{delay: 1.4}}
       >
         <Stars fill="#EF6461" />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 };
@@ -110,19 +111,19 @@ export default function Home() {
   return (
     <div className={`font-inter bg-background text-font-color ${!showContent && 'overflow-hidden'}`}>
       <AnimatePresence mode='wait'>
-        {/* {isLoading && (
+        {isLoading && (
           <motion.div className='w-full h-screen flex justify-center items-center'>
             <LoadingScreen />
           </motion.div>
         )} 
         {showContent && (
-          <motion.div>
+          <motion.div className='bg-[#201F3442] bg-opacity-25 '>
             <Page/>
           </motion.div>
-        )} */}
-        <motion.div>
+        )}
+        {/* <motion.div className='bg-[#201F3442] bg-opacity-25 '>
           <Page/>
-        </motion.div>
+        </motion.div> */}
       </AnimatePresence>
     </div>
   )

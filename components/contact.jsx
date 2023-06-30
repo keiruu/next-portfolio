@@ -32,13 +32,13 @@ export default function Contact() {
   
   return (
     <div className='flex flex-col items-center text-center gap-2 py-28 lg:py-40'>
-      <h3 className='font-bowlby text-2xl lg:text-5xl'><span className='text-accent-1'>Reach</span> out to me</h3>
-      <p className='text-font-color-2 text-sm lg:text-xl w-[80%] lg:w-[40%]'>I&apos;m always open to new opportunities, collaborations, and connections. Whether you have a project you&apos;d like to discuss, want to share your work, or just say hi! Feel free to reach out.</p>
+      <h3 className='font-black text-2xl lg:text-5xl'><span className='text-accent-1'>Reach</span> out to me</h3>
+      <p className='text-font-color-2 text-sm lg:text-xl w-[80%] lg:w-[50%]'>I&apos;m always open to new opportunities, collaborations, and connections. Whether you have a project you&apos;d like to discuss, want to share your work, or just say hi! Feel free to reach out.</p>
       
       <motion.div className='relative mt-4' initial='rest' whileHover='hover' animate='rest'>
         <div className='flex gap-2'>
           <TbCopy className={copied ? 'text-accent-1' : 'text-white'}/>
-          <button onClick={handleCopy} className='text-lg lg:text-3xl underline hover:text-accent-1 transition-all'> abigailkaye.unating@gmail.com</button>
+          <button onClick={handleCopy} className='text-base lg:text-3xl underline hover:text-accent-1 transition-all'> abigailkaye.unating@gmail.com</button>
         </div>
 
         <motion.div className='absolute -left-4 bottom-0'
