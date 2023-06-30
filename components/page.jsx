@@ -115,7 +115,7 @@ export default function Page() {
         </motion.div>
         <div className='space-y-20 w-full flex flex-col items-center'>
           <Project title='Annountr' 
-            desc='A glorified announcement organizer'
+            desc='A web application for organizing your announcements'
             link='https://annountr.vercel.app/'
             img='/projects/annountr.svg'
             tags='Typescript Next.js Tailwind React Node.js Express Prisma'
