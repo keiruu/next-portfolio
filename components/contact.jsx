@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <div className='flex flex-col items-center text-center gap-2 py-28 lg:py-40'>
       <h3 className='font-black text-2xl lg:text-5xl'><span className='text-accent-1'>Reach</span> out to me</h3>
-      <p className='text-font-color-2 text-sm lg:text-xl w-[80%] lg:w-[50%]'>I&apos;m always open to new opportunities, collaborations, and connections. Whether you have a project you&apos;d like to discuss, want to share your work, or just say hi! Feel free to reach out.</p>
+      <p className='text-font-color-2 text-sm lg:text-xl w-[85%] lg:w-[50%]'>I&apos;m always open to new opportunities, collaborations, and connections. Whether you have a project you&apos;d like to discuss, want to share your work, or just say hi! Feel free to reach out.</p>
       
       <motion.div className='relative mt-4' initial='rest' whileHover='hover' animate='rest'>
         <div className='flex gap-2'>
