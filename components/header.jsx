@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { BsLinkedin, BsGithub } from 'react-icons/bs'
 import Stars from '@/components/stars'
 import { motion } from 'framer-motion'
-
+import { FiDownload } from 'react-icons/fi'
 export default function Header() {
   const [hovered, setHovered] = useState(false)
 
@@ -151,7 +151,8 @@ export default function Header() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1}}
           transition={{delay: 1.7}}
-        className='text-sm lg:text-base text-font-color-2'>I like building web apps using <b>React</b> & mobile apps using <b>Flutter</b></motion.p>
+        className='text-sm lg:text-base text-font-color-2'>
+          A motivated <b>Full Stack Developer</b> who enjoys building web applications with <b>React</b> and exploring the realm of mobile app development using <b>Flutter</b>.</motion.p>
       </div>
 
 
@@ -159,20 +160,30 @@ export default function Header() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1}}
         transition={{ delay: 1.9, staggerChildren: 0.3}}
-        className='flex gap-3 lg:gap-5 items-center'
+        className='flex md:flex-row flex-col gap-3 lg:gap-5 items-start lg:items-center'
       >
-        <motion.button variants={buttonVariants} onClick={scrollToSection} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} 
-          className='border-accent-2 border hover:border-white transition-all px-5 lg:px-8 py-3 bg-accent-2 rounded-full text-xs lg:text-base'>Get in Touch</motion.button>
-        <motion.a variants={buttonVariants} href='https://www.linkedin.com/in/abbyunat/' target='_blank' rel='noreferrer'>
-          <button onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} className='rounded-full border p-3 lg:p-5 border-font-color-2 hover:border-white transition-all'>
-            <BsLinkedin size={18}/>
-          </button>
-        </motion.a>
-        <motion.a variants={buttonVariants} href='https://github.com/keiruu' target='_blank' rel='noreferrer'>
-          <button onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} className='rounded-full border p-3 lg:p-5 border-font-color-2 hover:border-white transition-all'>
-            <BsGithub size={18}/>
-          </button>
-        </motion.a>
+        <div className='flex gap-3 lg:gap-5 items-center'>
+          <motion.a href='/resume.pdf' target="_blank" rel="noreferrer" variants={buttonVariants} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} 
+            className='flex items-center justify-center border-accent-2 border hover:border-white transition-all w-[30vw] md:w-[15vw] lg:w-[10vw] py-4 bg-accent-2 rounded-full text-xs lg:text-base'>
+              <span className='flex items-center gap-2'><FiDownload/> Resume</span>
+          </motion.a>
+          <motion.button variants={buttonVariants} onClick={scrollToSection} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} 
+            className='border-font-color-2 border text-white hover:border-white transition-all w-[30vw] md:w-[15vw] lg:w-[10vw] py-4 bg-transparent rounded-full text-xs lg:text-base'>
+              Get in Touch
+          </motion.button>
+        </div>
+        <div  className='flex gap-3 lg:gap-5 items-center'>
+          <motion.a variants={buttonVariants} href='https://www.linkedin.com/in/abbyunat/' target='_blank' rel='noreferrer'>
+            <button onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} className='rounded-full border p-3 lg:p-5 border-font-color-2 hover:border-white transition-all'>
+              <BsLinkedin size={18}/>
+            </button>
+          </motion.a>
+          <motion.a variants={buttonVariants} href='https://github.com/keiruu' target='_blank' rel='noreferrer'>
+            <button onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} className='rounded-full border p-3 lg:p-5 border-font-color-2 hover:border-white transition-all'>
+              <BsGithub size={18}/>
+            </button>
+          </motion.a>
+        </div>
       </motion.div>
     </div>
   )

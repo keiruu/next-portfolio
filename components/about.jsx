@@ -16,10 +16,17 @@ export default function About() {
         <img src='close.svg' className='w-8 lg:w-fit'/>
       </div>
       <div className='flex lg:flex-row flex-col gap-8 justify-between w-full'>
-        <div className='flex flex-col justify-center w-full lg:w-1/2 space-y-4 lg:space-y-8 bg-[#28272F] bg-opacity-25 p-8 lg:p-14 rounded-[30px] border border-accent-3 '>
+        <div className='flex flex-col justify-center w-full lg:w-1/2 space-y-4 lg:space-y-6 bg-[#28272F] bg-opacity-25 p-8 lg:p-14 rounded-[30px] border border-accent-3 '>
           <img src='me.svg' alt='A photo of Abigail' className='w-full'/>
           <h2 className='font-semibold text-xl lg:text-3xl'>Abigail Kaye Unating</h2>
-          <p className='text-xs lg:text-base'>I am always willing to learn new tech. Nowadays, I&apos;ve been focusing on building web apps with React and mobile apps using Flutter.</p>
+          <p className='text-xs lg:text-base'>
+            I am always willing to learn new tech. Nowadays, 
+            I&apos;ve been focusing on building web apps with React and learning 
+            everything that I can to improve myself. <br/>
+            
+            Outside of work, I enjoy playing video games, watching anime & kdrama, and building keyboards ⌨️
+            </p>
+
           <a href='/resume.pdf' target="_blank" rel="noreferrer" className='w-fit'>
             <button className='group w-fit flex items-center gap-1 text-base lg:text-xl text-accent-2'>
               View Resume <FiArrowUpRight className='group-hover:-translate-y-1 group-hover:translate-x-1 transition-all transform'/>
