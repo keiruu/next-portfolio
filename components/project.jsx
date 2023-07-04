@@ -8,7 +8,7 @@ export default function Project (props) {
 
   return (
     <a href={link} target='_blank' rel='noreferrer' 
-    className='w-fit hover:drop-shadow-xl drop-shadow-none border border-accent-3 transition-all relative overflow-hidden flex flex-col lg:flex-row justify-between items-center 
+    className='w-full hover:drop-shadow-xl drop-shadow-none border border-accent-3 transition-all relative overflow-hidden flex flex-col lg:flex-row justify-between items-center 
     bg-[#28272F] hover:bg-opacity-100 bg-opacity-25 px-8 lg:px-24 py-10 lg:py-20 rounded-[30px] gap-12'>
       <div className='w-full lg:w-1/2'>
         <img src={img} alt={`${title} image`}/>
