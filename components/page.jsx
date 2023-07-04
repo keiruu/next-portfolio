@@ -8,7 +8,7 @@ import Footer from '@/components/footer'
 import { FiArrowUp } from 'react-icons/fi'
 import { useInView } from 'react-intersection-observer'
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
-import { useEffect, useState, MouseEvent } from 'react'
+import { useEffect, useState } from 'react'
 import Header from './header'
 import About from './about'
 
@@ -92,26 +92,6 @@ export default function Page() {
             <h1 className='text-lg lg:text-3xl font-bold' ref={ref}>Projects I&apos;ve worked on</h1>     
             <img src='close.svg' className='w-8 lg:w-fit'/>
           </div>
-          {/* <motion.div className='absolute -right-5 -top-5'
-            initial="initial"
-            animate={inView ? 'hover' : 'initial'}
-            variants={imageVariants}
-            transition={transition}
-          >
-            <div className='transform rotate-12 scale-100 lg:scale-150'>
-              <Stars fill="#FFC857" />
-            </div>
-          </motion.div>
-          <motion.div className='absolute right-3 -top-3 transform rotate-45scale-[2]'
-            initial="initial"
-            animate={inView ? 'hover' : 'initial'}
-            variants={imageVariants}
-            transition={transition}
-          >
-            <div className='transform -rotate-12 scale-75 lg:scale-95'>
-              <Stars fill="#EF6461" />
-            </div>
-          </motion.div> */}
         </motion.div>
         <div className='space-y-20 w-full flex flex-col items-center'>
           <Project title='Annountr' 
